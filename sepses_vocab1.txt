@@ -1,0 +1,34 @@
+{
+  "@context": {
+    "timestamp": {
+       "@id":"http://sepses.tuwien.ac.at/#timestamp",
+       "@type": "xsd:dateTime"
+    } ,
+	"host": "http://sepses.tuwien.ac.at/#host",
+    "program": "http://sepses.tuwien.ac.at/#program",
+    "pid": {
+        "@id": "http://sepses.tuwien.ac.at/#pid",
+        "@type": "xsd:integer"
+        },
+    "source": "http://sepses.tuwien.ac.at/#source",
+    "logsource": "http://sepses.tuwien.ac.at/#logsource",
+    "log-type": "http://sepses.tuwien.ac.at/#log-type",
+    "message": "http://sepses.tuwien.ac.at/#message",
+    "agent": "http://sepses.tuwien.ac.at/#agent",
+    "httpversion": "http://sepses.tuwien.ac.at/#httpversion",
+    "bytes": {
+        "@id" : "http://sepses.tuwien.ac.at/#bytes",
+        "@type": "xsd:integer"
+     },
+    "clientip": "http://sepses.tuwien.ac.at/#clientip",
+    "verb": "http://sepses.tuwien.ac.at/#verb",
+    "ident": "http://sepses.tuwien.ac.at/#ident",
+    "referrer": {
+        "@id": "http://sepses.tuwien.ac.at/#referrer",
+        "@type": "@id"},
+    "request": "http://sepses.tuwien.ac.at/#request",
+    "response": "http://sepses.tuwien.ac.at/#response",
+    "auth": "http://sepses.tuwien.ac.at/#auth",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }
+ }
