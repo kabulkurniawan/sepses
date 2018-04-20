@@ -9,43 +9,32 @@
   "@graph":[
     
 	{
-
-       
 		"@id": "http://sepses.tuwien.ac.at/vocab/general-log",
-		"@type": "owl:Ontology"
-		
+		"@type": "owl:Ontology"	
 	},
   
 	{
 		"@id": "gl:host",
-		"@type": [
-			"owl:Class"
-		]
+		"@type": "owl:Class"
 	},
   	{
 		"@id": "gl:logEntry",
-		"@type": [
-			"owl:Class"
-		]
+		"@type": "owl:Class"
 	},
 	{
 		"@id": "gl:logSource",
-		"@type": [
-			"owl:Class"
-		]
+		"@type": "owl:Class"
 	},
 
 	{
 		"@id": "gl:originatesFrom",
-		"@type": [
-			"owl:ObjectProperty"
-		],
-      "rdfs:domain": [
+		"@type":"owl:ObjectProperty",
+         "rdfs:domain": [
 			{
 				"@id": "gl:logEntry"
 			}
 		],
-      "rdfs:range": [
+        "rdfs:range": [
 			{
 				"@id": "gl:logSource"
 			}
@@ -53,9 +42,7 @@
 	},
 	{
 		"@id": "gl:producedBy",
-		"@type": [
-			"owl:ObjectProperty"
-		],
+		"@type":"owl:ObjectProperty",
       "rdfs:domain": [
 			{
 				"@id": "gl:logSource"
@@ -69,9 +56,7 @@
 	},
   {
 		"@id": "gl:hostName",
-		"@type": [
-			"owl:DatatypeProperty"
-		],
+		"@type":"owl:DatatypeProperty",
     "rdfs:domain": [
 			{
 				"@id": "gl:host"
@@ -85,9 +70,7 @@
 	},
   {
 		"@id": "gl:IPAddress",
-		"@type": [
-			"owl:DatatypeProperty"
-		],
+		"@type": "owl:DatatypeProperty",
 		"rdfs:domain": [
 			{
 				"@id": "gl:host"
@@ -101,9 +84,7 @@
 	},
     {
 		"@id": "gl:logSourcePath",
-		"@type": [
-			"owl:DatatypeProperty"
-		],
+		"@type": "owl:DatatypeProperty",
 		"rdfs:domain": [
 			{
 				"@id": "gl:logSource"
@@ -117,9 +98,7 @@
 	},
     {
 		"@id": "gl:logType",
-		"@type": [
-			"owl:DatatypeProperty"
-		],
+		"@type":"owl:DatatypeProperty",
 		"rdfs:domain": [
 			{
 				"@id": "gl:logSource"
@@ -133,9 +112,7 @@
 	},
     {
 		"@id": "gl:hasTimeStamp",
-		"@type": [
-			"owl:DatatypeProperty"
-		],
+		"@type":"owl:DatatypeProperty",
 		"rdfs:domain": [
 			{
 				"@id": "gl:logEntry"
