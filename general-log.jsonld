@@ -1,144 +1,152 @@
-[
-  
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#:",
+    "gl": "http://sepses.tuwien.ac.at/vocab/general-log#"
+  },
+  "@graph":[
     
 	{
 
        
 		"@id": "http://sepses.tuwien.ac.at/vocab/general-log",
-		"@type": "http://www.w3.org/2002/07/owl#Ontology"
+		"@type": "owl:Ontology"
 		
 	},
   
 	{
-		"@id": "http://sepses.tuwien.ac.at/vocab/general-log#host",
+		"@id": "gl:host",
 		"@type": [
-			"http://www.w3.org/2002/07/owl#Class"
+			"owl:Class"
 		]
 	},
   	{
-		"@id": "http://sepses.tuwien.ac.at/vocab/general-log#logEntry",
+		"@id": "gl:logEntry",
 		"@type": [
-			"http://www.w3.org/2002/07/owl#Class"
+			"owl:Class"
 		]
 	},
 	{
-		"@id": "http://sepses.tuwien.ac.at/vocab/general-log#logSource",
+		"@id": "gl:logSource",
 		"@type": [
-			"http://www.w3.org/2002/07/owl#Class"
+			"owl:Class"
 		]
 	},
 
 	{
-		"@id": "http://sepses.tuwien.ac.at/vocab/general-log#originatesFrom",
+		"@id": "gl:originatesFrom",
 		"@type": [
-			"http://www.w3.org/2002/07/owl#ObjectProperty"
+			"owl:ObjectProperty"
 		],
-		"http://www.w3.org/2000/01/rdf-schema#domain": [
+      "rdfs:domain": [
 			{
-				"@id": "http://sepses.tuwien.ac.at/vocab/general-log#logEntry"
+				"@id": "gl:logEntry"
 			}
 		],
-		"http://www.w3.org/2000/01/rdf-schema#range": [
+      "rdfs:range": [
 			{
-				"@id": "http://sepses.tuwien.ac.at/vocab/general-log#logSource"
+				"@id": "gl:logSource"
 			}
 		]
 	},
 	{
-		"@id": "http://sepses.tuwien.ac.at/vocab/general-log#producedBy",
+		"@id": "gl:producedBy",
 		"@type": [
-			"http://www.w3.org/2002/07/owl#ObjectProperty"
+			"owl:ObjectProperty"
 		],
-		"http://www.w3.org/2000/01/rdf-schema#domain": [
+      "rdfs:domain": [
 			{
-				"@id": "http://sepses.tuwien.ac.at/vocab/general-log#logSource"
+				"@id": "gl:logSource"
 			}
 		],
-		"http://www.w3.org/2000/01/rdf-schema#range": [
+      "rdfs:range": [
 			{
-				"@id": "http://sepses.tuwien.ac.at/vocab/general-log#host"
+				"@id": "gl:host"
 			}
 		]
 	},
   {
-		"@id": "http://sepses.tuwien.ac.at/vocab/general-log#hostName",
+		"@id": "gl:hostName",
 		"@type": [
-			"http://www.w3.org/2002/07/owl#DatatypeProperty"
+			"owl:DatatypeProperty"
 		],
-		"http://www.w3.org/2000/01/rdf-schema#domain": [
+    "rdfs:domain": [
 			{
-				"@id": "http://sepses.tuwien.ac.at/vocab/general-log#host"
+				"@id": "gl:host"
 			}
 		],
-		"http://www.w3.org/2000/01/rdf-schema#range": [
+    "rdfs:range": [
 			{
-				"@id": "http://www.w3.org/2001/XMLSchema#string"
+				"@id": "xsd:string"
 			}
 		]
 	},
   {
-		"@id": "http://sepses.tuwien.ac.at/vocab/general-log#IPAddress",
+		"@id": "gl:IPAddress",
 		"@type": [
-			"http://www.w3.org/2002/07/owl#DatatypeProperty"
+			"owl:DatatypeProperty"
 		],
-		"http://www.w3.org/2000/01/rdf-schema#domain": [
+		"rdfs:domain": [
 			{
-				"@id": "http://sepses.tuwien.ac.at/vocab/general-log#host"
+				"@id": "gl:host"
 			}
 		],
-		"http://www.w3.org/2000/01/rdf-schema#range": [
+		"rdfs:range": [
 			{
-				"@id": "http://www.w3.org/2001/XMLSchema#string"
+				"@id": "xsd:string"
 			}
 		]
 	},
     {
-		"@id": "http://sepses.tuwien.ac.at/vocab/general-log#logSourcePath",
+		"@id": "gl:logSourcePath",
 		"@type": [
-			"http://www.w3.org/2002/07/owl#DatatypeProperty"
+			"owl:DatatypeProperty"
 		],
-		"http://www.w3.org/2000/01/rdf-schema#domain": [
+		"rdfs:domain": [
 			{
-				"@id": "http://sepses.tuwien.ac.at/vocab/general-log#logSource"
+				"@id": "gl:logSource"
 			}
 		],
-		"http://www.w3.org/2000/01/rdf-schema#range": [
+		"rdfs:range": [
 			{
-				"@id": "http://www.w3.org/2001/XMLSchema#string"
+				"@id": "xsd:string"
 			}
 		]
 	},
     {
-		"@id": "http://sepses.tuwien.ac.at/vocab/general-log#logType",
+		"@id": "gl:logType",
 		"@type": [
-			"http://www.w3.org/2002/07/owl#DatatypeProperty"
+			"owl:DatatypeProperty"
 		],
-		"http://www.w3.org/2000/01/rdf-schema#domain": [
+		"rdfs:domain": [
 			{
-				"@id": "http://sepses.tuwien.ac.at/vocab/general-log#logSource"
+				"@id": "gl:logSource"
 			}
 		],
-		"http://www.w3.org/2000/01/rdf-schema#range": [
+		"rdfs:range": [
 			{
-				"@id": "http://www.w3.org/2001/XMLSchema#string"
+				"@id": "xsd:string"
 			}
 		]
 	},
     {
-		"@id": "http://sepses.tuwien.ac.at/vocab/general-log#hasTimeStamp",
+		"@id": "gl:hasTimeStamp",
 		"@type": [
-			"http://www.w3.org/2002/07/owl#DatatypeProperty"
+			"owl:DatatypeProperty"
 		],
-		"http://www.w3.org/2000/01/rdf-schema#domain": [
+		"rdfs:domain": [
 			{
-				"@id": "http://sepses.tuwien.ac.at/vocab/general-log#logEntry"
+				"@id": "gl:logEntry"
 			}
 		],
-		"http://www.w3.org/2000/01/rdf-schema#range": [
+		"rdfs:range": [
 			{
-				"@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+				"@id": "xsd:dateTime"
 			}
 		]
 	}
  
 ]
+}
