@@ -1,11 +1,20 @@
-@prefix glog: <http://raw.githubusercontent.com/kabulkurniawan/sepses/master/genlog#> .
+@prefix glog: <http://kabulkurniawan.com/vocab/genlog#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://raw.githubusercontent.com/kabulkurniawan/sepses/master/genlog> a owl:Ontology .
+<http://kabulkurniawan.com/vocab/genlog> a owl:Ontology .
+
+
+glog:host a owl:Class .
+
+glog:logSource a owl:Class .
+
+glog:logEntry a owl:Class .
+
+glog:logType a owl:Class .
 
 glog:IPAddress a owl:DatatypeProperty ;
     rdfs:domain :host;
@@ -19,6 +28,10 @@ glog:logFileName a owl:DatatypeProperty ;
     rdfs:domain :logSource ;
     rdfs:range xsd:string .
 
+glog:logTypeName a owl:DatatypeProperty ;
+    rdfs:domain :logType ;
+    rdfs:range xsd:string .
+
 glog:logFilePath a owl:DatatypeProperty ;
     rdfs:domain :logSource ;
     rdfs:range xsd:string .
@@ -27,11 +40,13 @@ glog:logMessage a owl:DatatypeProperty ;
     rdfs:domain :logEntry ;
     rdfs:range xsd:string .
 
-
 glog:logTimesStamp a owl:DatatypeProperty ;
     rdfs:domain :logEntry ;
     rdfs:range xsd:dateTime .
 
+glog:hasLogType a owl:ObjectProperty ;
+	rdfs:domain :logSource ;
+	rdfs:range :logType .
 
 glog:originatesFrom a owl:ObjectProperty ;
     rdfs:domain :logEntry ;
@@ -40,10 +55,11 @@ glog:originatesFrom a owl:ObjectProperty ;
 glog:producedBy a owl:ObjectProperty ;
     rdfs:domain :logSource ;
     rdfs:range :host .
+		
+glog:Syslog a :logType,
+        owl:NamedIndividual ;
+    :logTypeName "Syslog"^^xsd:String .
 
-
-glog:logSource a owl:Class .
-
-glog:host a owl:Class .
-
-glog:logEntry a owl:Class .
+glog:Apache a :logType,
+        owl:NamedIndividual ;
+    :logTypeName "Apache"^^xsd:String .
