@@ -10,8 +10,6 @@
 
 glog:host a owl:Class .
 
-glog:logSource a owl:Class .
-
 glog:logEntry a owl:Class .
 
 glog:logType a owl:Class .
@@ -24,16 +22,12 @@ glog:hostName a owl:DatatypeProperty ;
     rdfs:domain :host ;
     rdfs:range xsd:string .
 
-glog:logFileName a owl:DatatypeProperty ;
-    rdfs:domain :logSource ;
-    rdfs:range xsd:string .
-
 glog:logTypeName a owl:DatatypeProperty ;
     rdfs:domain :logType ;
     rdfs:range xsd:string .
 
 glog:logFilePath a owl:DatatypeProperty ;
-    rdfs:domain :logSource ;
+    rdfs:domain :logEntry ;
     rdfs:range xsd:string .
 
 glog:logMessage a owl:DatatypeProperty ;
@@ -45,15 +39,11 @@ glog:logTimesStamp a owl:DatatypeProperty ;
     rdfs:range xsd:dateTime .
 
 glog:hasLogType a owl:ObjectProperty ;
-	rdfs:domain :logSource ;
+	rdfs:domain :logEntry ;
 	rdfs:range :logType .
 
 glog:originatesFrom a owl:ObjectProperty ;
     rdfs:domain :logEntry ;
-    rdfs:range :logSource .
-
-glog:producedBy a owl:ObjectProperty ;
-    rdfs:domain :logSource ;
     rdfs:range :host .
 		
 glog:Syslog a :logType,
@@ -63,3 +53,8 @@ glog:Syslog a :logType,
 glog:Apache a :logType,
         owl:NamedIndividual ;
     :logTypeName "Apache"^^xsd:String .
+
+glog:kabul-VirtualBox a :host,
+		owl:NamedIndividual ;
+	:hostName "kabul-VirtualBox"^^xsd:String ;
+	:IPAddress "192.168.0.164" .
