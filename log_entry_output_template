@@ -1,0 +1,71 @@
+{
+  "@context": {
+    "glog": "http://kabulkurniawan.com/vocab/genlog#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    
+    "glog:originatesFrom": {
+      "@type": "@id"
+    },
+    "glog:hasLogType": {
+      "@type": "@id"
+    },
+    "glog:producedBy": {
+      "@type": "@id"
+    }
+    
+    
+  },
+  "@graph": [
+    
+    {
+      "@id": "glog:kabul-VirtualBox",
+      "@type": [
+        "owl:NamedIndividual",
+        "glog:host"
+      ],
+      "glog:hostName": {
+        "@type": "xsd:String",
+        "@value": "kabul-VirtualBox"
+      },
+      "glog:IPAddress": {
+        "@type": "xsd:String",
+        "@value": "192.168.0.164"
+      }
+    },
+    {
+      "@id": "glog:logSyslog",
+      "@type": [
+        "owl:NamedIndividual",
+        "glog:logSource"
+      ],
+      "glog:logFileName": {
+        "@type": "xsd:String",
+        "@value": "syslog_sample.log"
+      },
+      "glog:logFilePath": {
+        "@type": "xsd:String",
+        "@value": "/home/kabul/log_sample/syslog_sample.log"
+      },
+      "glog:producedBy":"glog:kabul-VirtualBox",
+      "glog:hasLogType":"glog:Syslog"
+    },
+        {
+      "@id": "glog:logEntry1",
+      "@type": [
+        "owl:NamedIndividual",
+        "glog:logEntry"
+      ],
+      "glog:originatesFrom":"glog:logSyslog",
+      "glog:logTimeStamp":
+       {
+        "@type": "xsd:dateTime",
+        "@value": "2018-04-09T07:36:09.000Z"
+      } ,
+      "glog:logMessage": {
+        "@type": "xsd:String",
+        "@value": "Apr  9 09:36:09 kabul-VirtualBox NetworkManager[721]: <info>  [1523259369.3084] dhcp4 (enp0s3): state changed bound -> done"
+      }
+    }
+  ]
+}
