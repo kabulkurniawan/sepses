@@ -1,0 +1,88 @@
+@prefix : <http://kabulkurniawan.com/vocab/apache-event#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://kabulkurniawan.com/vocab/apache-event#> a owl:Ontology .
+
+:Agent a owl:Class .
+
+:Client a owl:Class .
+
+:Response a owl:Class .
+
+:ResponseType a owl:Class .
+
+:Request a owl:Class .
+
+:Server a owl:Class .
+
+:Resource a owl:Class .
+
+
+:agentDescription a owl:DatatypeProperty ;
+    rdfs:domain :Agent ;
+    rdfs:range rdfs:Literal .
+
+:belongsTo a owl:ObjectProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range :Server .
+
+:giveResponse a owl:ObjectProperty ;
+    rdfs:domain :Server ;
+    rdfs:range :Response .
+
+:hasAgent a owl:ObjectProperty ;
+    rdfs:domain :Client ;
+    rdfs:range :Agent .
+
+:hasRequest a owl:ObjectProperty ;
+    rdfs:domain :Client ;
+    rdfs:range :Server .
+
+:hasResource a owl:ObjectProperty ;
+    rdfs:domain :Response ;
+    rdfs:range :Resource .
+
+:hasResponse a owl:ObjectProperty ;
+    rdfs:domain :Server ;
+    rdfs:range :Client .
+
+:hasResponseType a owl:ObjectProperty ;
+    rdfs:domain :Response ;
+    rdfs:range :ResponseType .
+
+:httpVersion a owl:DatatypeProperty ;
+    rdfs:domain :Request ;
+    rdfs:range xsd:string .
+
+:referrer a owl:DatatypeProperty ;
+    rdfs:domain :Request ;
+    rdfs:range rdfs:Literal .
+
+:requestTarget a owl:ObjectProperty ;
+    rdfs:domain :Request ;
+    rdfs:range :Resource .
+
+:requestVerb a owl:DatatypeProperty ;
+    rdfs:domain :Request ;
+    rdfs:range xsd:string .
+
+:resourcePath a owl:DatatypeProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range rdfs:Literal .
+
+:resourceSize a owl:DatatypeProperty ;
+    rdfs:domain :Resource ;
+    rdfs:range xsd:int .
+
+:responseTypeCode a owl:DatatypeProperty ;
+    rdfs:domain :ResponseType ;
+    rdfs:range xsd:int .
+
+:responseTypeDescription a owl:DatatypeProperty ;
+    rdfs:domain :ResponseType ;
+    rdfs:range rdfs:Literal .
+
