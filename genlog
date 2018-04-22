@@ -1,4 +1,4 @@
-@prefix glog: <http://kabulkurniawan.com/vocab/genlog#> .
+@prefix : <http://kabulkurniawan.com/vocab/genlog#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -8,53 +8,53 @@
 <http://kabulkurniawan.com/vocab/genlog> a owl:Ontology .
 
 
-glog:host a owl:Class .
+:host a owl:Class .
 
-glog:logEntry a owl:Class .
+:logEntry a owl:Class .
 
-glog:logType a owl:Class .
+:logType a owl:Class .
 
-glog:IPAddress a owl:DatatypeProperty ;
+:IPAddress a owl:DatatypeProperty ;
     rdfs:domain :host;
     rdfs:range xsd:string .
 
-glog:hostName a owl:DatatypeProperty ;
+:hostName a owl:DatatypeProperty ;
     rdfs:domain :host ;
     rdfs:range xsd:string .
 
-glog:logTypeName a owl:DatatypeProperty ;
+:logTypeName a owl:DatatypeProperty ;
     rdfs:domain :logType ;
     rdfs:range xsd:string .
 
-glog:logFilePath a owl:DatatypeProperty ;
+:logFilePath a owl:DatatypeProperty ;
     rdfs:domain :logEntry ;
     rdfs:range xsd:string .
 
-glog:logMessage a owl:DatatypeProperty ;
+:logMessage a owl:DatatypeProperty ;
     rdfs:domain :logEntry ;
     rdfs:range xsd:string .
 
-glog:logTimesStamp a owl:DatatypeProperty ;
+:logTimesStamp a owl:DatatypeProperty ;
     rdfs:domain :logEntry ;
     rdfs:range xsd:dateTime .
 
-glog:hasLogType a owl:ObjectProperty ;
+:hasLogType a owl:ObjectProperty ;
 	rdfs:domain :logEntry ;
 	rdfs:range :logType .
 
-glog:originatesFrom a owl:ObjectProperty ;
+:originatesFrom a owl:ObjectProperty ;
     rdfs:domain :logEntry ;
     rdfs:range :host .
 		
-glog:Syslog a :logType,
+:Syslog a :logType,
         owl:NamedIndividual ;
     :logTypeName "Syslog"^^xsd:String .
 
-glog:Apache a :logType,
+:Apache a :logType,
         owl:NamedIndividual ;
     :logTypeName "Apache"^^xsd:String .
 
-glog:kabul-VirtualBox a :host,
+:kabul-VirtualBox a :host,
 		owl:NamedIndividual ;
 	:hostName "kabul-VirtualBox"^^xsd:String ;
 	:IPAddress "192.168.0.164" .
