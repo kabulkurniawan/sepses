@@ -1,7 +1,11 @@
 @prefix : <http://kabulkurniawan.com/vocab/networkModel> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix glog:<http://kabulkurniawan.com/vocab/genlog#> .
+@prefix ape:<http://kabulkurniawan.com/vocab/apache-Event#> .
 
 :kabul-VirtualBox a glog:host,
 	glog:hostName "kabul-VirtualBox"^^xsd:String ;
 	glog:IPAddress "192.168.0.164"^^xsd:String .
+	
+:client1 a ape:client,
+	glog:IPAddress "66.249.73.135"^^xsd:String .
