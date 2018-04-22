@@ -1,0 +1,7 @@
+@prefix : <http://kabulkurniawan.com/vocab/networkModel> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix glog:<http://kabulkurniawan.com/vocab/genlog#> .
+
+:kabul-VirtualBox a glog:host,
+	glog:hostName "kabul-VirtualBox"^^xsd:String ;
+	glog:IPAddress "192.168.0.164"^^xsd:String .
