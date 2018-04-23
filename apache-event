@@ -7,8 +7,6 @@
 
 <http://kabulkurniawan.com/vocab/apache-event#> a owl:Ontology .
 
-:Agent a owl:Class .
-
 :Client a owl:Class .
 
 :Response a owl:Class .
@@ -21,9 +19,11 @@
 
 :Resource a owl:Class .
 
+:RequestVerb a owl:Class .
 
-:agentDescription a owl:DatatypeProperty ;
-    rdfs:domain :Agent ;
+
+:agent a owl:DatatypeProperty ;
+    rdfs:domain :Request ;
     rdfs:range rdfs:Literal .
 
 :belongsTo a owl:ObjectProperty ;
@@ -33,10 +33,6 @@
 :giveResponse a owl:ObjectProperty ;
     rdfs:domain :Server ;
     rdfs:range :Response .
-
-:hasAgent a owl:ObjectProperty ;
-    rdfs:domain :Client ;
-    rdfs:range :Agent .
 
 :hasRequest a owl:ObjectProperty ;
     rdfs:domain :Client ;
@@ -66,13 +62,17 @@
     rdfs:domain :Request ;
     rdfs:range :Resource .
 
-:requestVerb a owl:DatatypeProperty ;
+:hasRequestVerb a owl:ObjectProperty ;
     rdfs:domain :Request ;
-    rdfs:range xsd:string .
+    rdfs:range :RequestVerb .
 
 :resourcePath a owl:DatatypeProperty ;
     rdfs:domain :Resource ;
     rdfs:range rdfs:Literal .
+	
+:requestVerbName a owl:DatatypeProperty ;
+    rdfs:domain :RequestVerb ;
+    rdfs:range xsd:String .
 
 :resourceSize a owl:DatatypeProperty ;
     rdfs:domain :Resource ;
@@ -85,4 +85,16 @@
 :responseTypeDescription a owl:DatatypeProperty ;
     rdfs:domain :ResponseType ;
     rdfs:range rdfs:Literal .
+	
+:GET a :RequestVerb,
+        owl:NamedIndividual ;
+    :requestVerbName "GET"^^xsd:String .
+	
+:POST a :RequestVerb,
+        owl:NamedIndividual ;
+    :requestVerbName "POST"^^xsd:String .
 
+:200 a :ResponseType,
+        owl:NamedIndividual ;
+		:responseTypeCode "200"^^xsd:String ;
+		:responseTypeDescription "Success"^^xsd:String .
