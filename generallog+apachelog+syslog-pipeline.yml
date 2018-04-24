@@ -1,6 +1,6 @@
 input {
   beats{
-         port => 5044
+	port => 5044
 }
 }
 
@@ -23,24 +23,28 @@ filter {
        add_field =>{ 
                      "[@context][sys]"=>"http://kabulkurniawan.com/vocab/syslog-event#"
                      "[@context][sys:program][@type]"=>"@id"
-                      "[sys:pid][@value]"=>"%{pid}"
+                      "[sys:programId][@value]"=>"%{pid}"
                       "[@context][sys:severity][@type]"=>"@id"
                       "[@context][sys:facility][@type]"=>"@id"
-                      "[sys:severity_code][@value]"=>"%{syslog_severity_code}"
-                      "[sys:facility_code][@value]"=>"%{syslog_facility_code}"
-                      "[sys:pid][@type]"=>"xsd:Int"
-                      "[sys:severity_code][@type]"=>"xsd:int"
-                      "[sys:facility_code][@type]"=>"xsd:int"
+                      "[sys:severityCode][@value]"=>"%{syslog_severity_code}"
+                      "[sys:facilityCode][@value]"=>"%{syslog_facility_code}"
+                      "[sys:programId][@type]"=>"xsd:Int"
+                      "[sys:severityCode][@type]"=>"xsd:int"
+                      "[sys:facilityCode][@type]"=>"xsd:int"
                       "[sys:program]"=>"sys:%{program}"
                       "[sys:severity]"=>"sys:%{syslog_severity}"
                       "[sys:facility]"=>"sys:%{syslog_facility}" 
             }
       remove_field =>["program","pid","syslog_program","syslog_pid","syslog_facility_code","syslog_facility","syslog_severity_code", "syslog_severity"]
      }
+        
+   
+
   } else if [log-type] == "apache" {
      grok {
       match => { "message" => "%{COMBINEDAPACHELOG}"}
      }
+
     date {
       locale => "en"
       timezone => "Europe/Vienna"
@@ -93,10 +97,15 @@ filter {
                     "[glog:originatesFrom]" => "glog:%{host}"
               
         }
+
      remove_field => ["logsource","tags","beat","prospector","@timestamp","@version","offset","message","source","timestamp","host","log-type"]
+     
+    
+      
   }
  
  }
+
 output { 
   file {
         path => "/home/kabul/outputlogstash/genlog_output.json"
