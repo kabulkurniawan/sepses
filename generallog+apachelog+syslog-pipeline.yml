@@ -1,6 +1,6 @@
 input {
   beats{
-	port => 5044
+         port => 5044
 }
 }
 
@@ -37,14 +37,10 @@ filter {
             }
       remove_field =>["program","pid","syslog_program","syslog_pid","syslog_facility_code","syslog_facility","syslog_severity_code", "syslog_severity"]
      }
-        
-   
-
   } else if [log-type] == "apache" {
      grok {
       match => { "message" => "%{COMBINEDAPACHELOG}"}
      }
-
     date {
       locale => "en"
       timezone => "Europe/Vienna"
@@ -97,15 +93,10 @@ filter {
                     "[glog:originatesFrom]" => "glog:%{host}"
               
         }
-
      remove_field => ["logsource","tags","beat","prospector","@timestamp","@version","offset","message","source","timestamp","host","log-type"]
-     
-    
-      
   }
  
  }
-
 output { 
   file {
         path => "/home/kabul/outputlogstash/genlog_output.json"
