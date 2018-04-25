@@ -87,5 +87,5 @@
     rdfs:range rdfs:Literal .
 	
 :clientIP a owl:DatatypeProperty ;
-    rdfs:domain :Client
-    rdfs:range rdfs:Literal
+    rdfs:domain :Client ;
+    rdfs:range xsd:String .
