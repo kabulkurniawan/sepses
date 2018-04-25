@@ -1,0 +1,165 @@
+@prefix : <http://kabulkurniawan.com/bg-knowledge/syslog-bgk#> .
+@prefix sys: <http://kabulkurniawan.com/vocab/syslog-event#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:emergency a sys:severity,
+        owl:NamedIndividual ;
+       sys:severityName "Emergency"^^xsd:string ;
+	   sys:severityCode "0"^^xsd:int . 
+	
+:alert a sys:severity,
+        owl:NamedIndividual ;
+       sys:severityName "Alert"^^xsd:string ;
+	   sys:severityCode "1"^^xsd:int .
+	   
+:critical a sys:severity,
+        owl:NamedIndividual ;
+       sys:severityName "Critical"^^xsd:string ;
+	   sys:severityCode "2"^^xsd:int .
+	   
+:error a sys:severity,
+        owl:NamedIndividual ;
+       sys:severityName "Error"^^xsd:string ;
+	   sys:severityCode "3"^^xsd:int .
+
+:warning a sys:severity,
+        owl:NamedIndividual ;
+       sys:severityName "Warning"^^xsd:string ;
+	   sys:severityCode "4"^^xsd:int .
+
+:notice a sys:severity,
+        owl:NamedIndividual ;
+       sys:severityName "Notice"^^xsd:string ;
+	   sys:severityCode "5"^^xsd:int .
+	   
+:informational a sys:severity,
+        owl:NamedIndividual ;
+       sys:severityName "Informational"^^xsd:string ;
+	   sys:severityCode "6"^^xsd:int .
+	   
+:debug a sys:severity,
+        owl:NamedIndividual ;
+       sys:severityName "Debug"^^xsd:string ;
+	   sys:severityCode "7"^^xsd:int .
+	   
+	   
+:kernel a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "kernel"^^xsd:string ;
+	   sys:facilityCode "0"^^xsd:int . 
+	   
+:user-level a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "user-level"^^xsd:string ;
+	   sys:facilityCode "1"^^xsd:int .
+	   
+:mail a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "mail"^^xsd:string ;
+	   sys:facilityCode "2"^^xsd:int . 
+	   
+:daemon a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "daemon"^^xsd:string ;
+	   sys:facilityCode "3"^^xsd:int . 
+	   
+:security/authorization a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "security/authorization"^^xsd:string ;
+	   sys:facilityCode "4"^^xsd:int . 
+	   
+:syslogd a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "syslogd"^^xsd:string ;
+	   sys:facilityCode "5"^^xsd:int . 
+	   
+:line-printer a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "line printer"^^xsd:string ;
+	   sys:facilityCode "6"^^xsd:int . 
+	   
+:network-news a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "network-news"^^xsd:string ;
+	   sys:facilityCode "7"^^xsd:int . 
+	   
+:uucp" a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "uucp"^^xsd:string ;
+	   sys:facilityCode "8"^^xsd:int . 
+	   
+:clock  a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "clock"^^xsd:string ;
+	   sys:facilityCode "9"^^xsd:int . 
+	   
+:ftp a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "ftp"^^xsd:string ;
+	   sys:facilityCode "10"^^xsd:int . 
+	   
+:ntp" a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "ntp"^^xsd:string ;
+	   sys:facilityCode "11"^^xsd:int . 
+	   
+:log-audit a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "log-audit"^^xsd:string ;
+	   sys:facilityCode "12"^^xsd:int . 
+	   
+:log-alert a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "log-alert"^^xsd:string ;
+	   sys:facilityCode "13"^^xsd:int .
+	   
+:cron a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "cron"^^xsd:string ;
+	   sys:facilityCode "14"^^xsd:int .
+	   
+:security/authorization a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "security/authorization"^^xsd:string ;
+	   sys:facilityCode "15"^^xsd:int .
+	   
+:local0 a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "local0"^^xsd:string ;
+	   sys:facilityCode "16"^^xsd:int .
+	   
+:local1 a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "local1"^^xsd:string ;
+	   sys:facilityCode "17"^^xsd:int .
+	   
+:local2 a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "local2"^^xsd:string ;
+	   sys:facilityCode "18"^^xsd:int .
+	   
+:local3 a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "local3"^^xsd:string ;
+	   sys:facilityCode "19"^^xsd:int .
+	   
+:local4 a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "local4"^^xsd:string ;
+	   sys:facilityCode "20"^^xsd:int .
+	   
+:local5 a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "local5"^^xsd:string ;
+	   sys:facilityCode "21"^^xsd:int .
+	   
+:local6 a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "local6"^^xsd:string ;
+	   sys:facilityCode "22"^^xsd:int .
+	   
+:local7 a sys:facility,
+        owl:NamedIndividual ;
+       sys:facilityName "local7"^^xsd:string ;
+	   sys:facilityCode "23"^^xsd:int .
