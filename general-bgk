@@ -2,6 +2,15 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix glog:<http://kabulkurniawan.com/vocab/genlog#> .
 @prefix ape:<http://kabulkurniawan.com/vocab/apache-Event#> .
+@prefix sys:<http://kabulkurniawan.com/vocab/syslog-Event#> .
+
+:syslog a glog:logType,
+        owl:NamedIndividual ;
+    glog:logTypeName "Syslog"^^xsd:String .
+
+:apache a glog:logType,
+        owl:NamedIndividual ;
+    glog:logTypeName "Apache"^^xsd:String .
 
 :kabul-VirtualBox a glog:host,
 	glog:hostName "kabul-VirtualBox"^^xsd:String ;
