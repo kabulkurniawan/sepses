@@ -46,15 +46,3 @@
     rdfs:domain :logEntry ;
     rdfs:range :host .
 		
-:Syslog a :logType,
-        owl:NamedIndividual ;
-    :logTypeName "Syslog"^^xsd:String .
-
-:Apache a :logType,
-        owl:NamedIndividual ;
-    :logTypeName "Apache"^^xsd:String .
-
-:kabul-VirtualBox a :host,
-		owl:NamedIndividual ;
-	:hostName "kabul-VirtualBox"^^xsd:String ;
-	:IPAddress "192.168.0.164" .
