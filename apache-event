@@ -86,15 +86,6 @@
     rdfs:domain :ResponseType ;
     rdfs:range rdfs:Literal .
 	
-:GET a :RequestVerb,
-        owl:NamedIndividual ;
-    :requestVerbName "GET"^^xsd:String .
-	
-:POST a :RequestVerb,
-        owl:NamedIndividual ;
-    :requestVerbName "POST"^^xsd:String .
-
-:200 a :ResponseType,
-        owl:NamedIndividual ;
-		:responseTypeCode "200"^^xsd:String ;
-		:responseTypeDescription "Success"^^xsd:String .
+:clientIP a owl:DatatypeProperty ;
+    rdfs:domain :Client
+    rdfs:range rdfs:Literal
