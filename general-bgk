@@ -1,4 +1,4 @@
-@prefix : <http://kabulkurniawan.com/bg-knowledge/generak-bk> .
+@prefix : <http://kabulkurniawan.com/bg-knowledge/general-bgk> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix glog:<http://kabulkurniawan.com/vocab/genlog#> .
 @prefix ape:<http://kabulkurniawan.com/vocab/apache-Event#> .
