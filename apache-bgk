@@ -1,0 +1,96 @@
+@prefix : <http://kabulkurniawan.com/bg-knowledge/apache-bgk#> .
+@prefix ape: <http://kabulkurniawan.com/vocab/apache-event#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:GET a ape:RequestVerb,
+        owl:NamedIndividual ;
+       ape:requestVerbName "GET"^^xsd:String .
+	
+:POST a ape:RequestVerb,
+        owl:NamedIndividual ;
+    ape:requestVerbName "POST"^^xsd:String .
+	
+:PUT a ape:RequestVerb,
+        owl:NamedIndividual ;
+    ape:requestVerbName "PUT"^^xsd:String .
+	
+:DELETE a ape:RequestVerb,
+        owl:NamedIndividual ;
+    ape:requestVerbName "DELETE"^^xsd:String .
+	
+:CONNECT a ape:RequestVerb,
+        owl:NamedIndividual ;
+    ape:requestVerbName "CONNECT"^^xsd:String .
+	
+:OPTIONS a ape:RequestVerb,
+        owl:NamedIndividual ;
+    ape:requestVerbName "OPTIONS"^^xsd:String .
+
+:TRACE a ape:RequestVerb,
+        owl:NamedIndividual ;
+    ape:requestVerbName "TRACE"^^xsd:String .
+
+:PATCH a ape:RequestVerb,
+        owl:NamedIndividual ;
+    ape:requestVerbName "PATCH"^^xsd:String .
+
+:200 a ape:ResponseType,
+        owl:NamedIndividual ;
+		ape:responseTypeCode "200"^^xsd:String ;
+		ape:responseTypeDescription "Success"^^xsd:String 
+
+:201 a ape:ResponseType,
+        owl:NamedIndividual ;
+		ape:responseTypeCode "201"^^xsd:String ;
+		ape:responseTypeDescription "Created"^^xsd:String 
+
+:202 a ape:ResponseType,
+        owl:NamedIndividual ;
+		ape:responseTypeCode "202"^^xsd:String ;
+		ape:responseTypeDescription "Accepted"^^xsd:String 
+
+
+:204 a ape:ResponseType,
+        owl:NamedIndividual ;
+		ape:responseTypeCode "203"^^xsd:String ;
+		ape:responseTypeDescription "No Content"^^xsd:String 
+
+:205 a ape:ResponseType,
+        owl:NamedIndividual ;
+		ape:responseTypeCode "200"^^xsd:String ;
+		ape:responseTypeDescription "Reset Content"^^xsd:String 
+		
+
+:206 a ape:ResponseType,
+        owl:NamedIndividual ;
+		ape:responseTypeCode "206"^^xsd:String ;
+		ape:responseTypeDescription "Partial Content"^^xsd:String 
+		
+
+:207 a ape:ResponseType,
+        owl:NamedIndividual ;
+		ape:responseTypeCode "207"^^xsd:String ;
+		ape:responseTypeDescription "Multi-Status"^^xsd:String 
+		
+
+:208 a ape:ResponseType,
+        owl:NamedIndividual ;
+		ape:responseTypeCode "208"^^xsd:String ;
+		ape:responseTypeDescription "Already Reported"^^xsd:String 
+		
+
+:403 a ape:ResponseType,
+        owl:NamedIndividual ;
+		ape:responseTypeCode "403"^^xsd:String ;
+		ape:responseTypeDescription "Forbidden"^^xsd:String 
+
+:404 a ape:ResponseType,
+        owl:NamedIndividual ;
+		ape:responseTypeCode "404"^^xsd:String ;
+		ape:responseTypeDescription "Not Found"^^xsd:String 
+		
+
+:83.149.9.216 a ape:Client,
+        owl:NamedIndividual ;
+		ape:clientIP "83.149.9.216"^^xsd:String .
