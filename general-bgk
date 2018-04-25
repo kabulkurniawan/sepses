@@ -16,5 +16,11 @@
 	glog:hostName "kabul-VirtualBox"^^xsd:String ;
 	glog:IPAddress "192.168.0.164"^^xsd:String .
 	
-:client1 a ape:client,
+:66.249.73.135 a ape:client,
 	glog:IPAddress "66.249.73.135"^^xsd:String .
+
+:83.149.9.216 a ape:client,
+	glog:IPAddress "83.149.9.216"^^xsd:String .
+
+:snap a sys:program,
+    sys:programName "snap"^^xsd:String .
