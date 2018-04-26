@@ -17,6 +17,16 @@
 :IPAddress a owl:DatatypeProperty ;
     rdfs:domain :host;
     rdfs:range xsd:string .
+    
+:IP4address a owl:DatatypeProperty ;
+    rdfs:domain :host ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf :IPAddress .
+    
+:IP6address a owl:DatatypeProperty ;
+    rdfs:domain :host ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf :IPAddress .
 
 :hostName a owl:DatatypeProperty ;
     rdfs:domain :host ;
