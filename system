@@ -1,0 +1,26 @@
+@prefix : <http://example.org/system#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix bl:<http://purl.org/sepses/vocab/log/baseLog#> .
+@prefix al:<http://purl.org/sepses/vocab/log/apacheLog#> .
+@prefix sl:<http://purl.org/sepses/vocab/log/syslogLog#> .
+
+:syslog a bl:logType,
+        owl:NamedIndividual ;
+    glog:logTypeName "Syslog"^^xsd:String .
+
+:apache a bl:logType,
+        owl:NamedIndividual ;
+    bl:logTypeName "Apache"^^xsd:String .
+
+:kabul-VirtualBox a bl:host,
+	bl:hostName "kabul-VirtualBox"^^xsd:String ;
+	bl:IPAddress "192.168.0.164"^^xsd:String .
+	
+:66.249.73.135 a al:client,
+	bl:IPAddress "66.249.73.135"^^xsd:String .
+
+:83.149.9.216 a al:client,
+	bl:IPAddress "83.149.9.216"^^xsd:String .
+
+:snap a sl:program,
+    sl:programName "snap"^^xsd:String .
