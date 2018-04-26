@@ -5,7 +5,215 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://purl.org/sepses/vocab/log/sysLog#> a owl:Ontology .@prefix : <http://purl.org/sepses/vocab/log/sysLog#>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
 <http://purl.org/sepses/vocab/log/sysLog#> a owl:Ontology .
+
+:facilityCode a rdfs:Datatype ;
+    rdfs:domain :facility ;
+    rdfs:range xsd:integer .
+
+:facilityName a rdfs:Datatype ;
+    rdfs:domain :facility ;
+    rdfs:range xsd:string .
+
+:hasFacility a rdfs:Property ;
+    rdfs:domain :program ;
+    rdfs:range :facility .
+
+:hasSeverity a rdfs:Property ;
+    rdfs:domain :program ;
+    rdfs:range :severity .
+
+:programId a rdfs:Datatype ;
+    rdfs:domain :program ;
+    rdfs:range xsd:int .
+
+:programName a rdfs:Datatype ;
+    rdfs:domain :program ;
+    rdfs:range xsd:string .
+
+:severityCode a rdfs:Datatype ;
+    rdfs:domain :severity ;
+    rdfs:range xsd:int .
+
+:severityName a rdfs:Datatype ;
+    rdfs:domain :severity ;
+    rdfs:range xsd:string .
+
+:facility a rdfs:Class .
+
+:severity a rdfs:Class .
+
+:program a rdfs:Class .
+
+
+
+:emergency a :severity,
+        owl:NamedIndividual ;
+       :severityName "Emergency"^^xsd:string ;
+	   :severityCode "0"^^xsd:int . 
+	
+:alert a :severity,
+        owl:NamedIndividual ;
+       :severityName "Alert"^^xsd:string ;
+	   :severityCode "1"^^xsd:int .
+	   
+:critical a :severity,
+        owl:NamedIndividual ;
+       :severityName "Critical"^^xsd:string ;
+	   :severityCode "2"^^xsd:int .
+	   
+:error a :severity,
+        owl:NamedIndividual ;
+       :severityName "Error"^^xsd:string ;
+	   :severityCode "3"^^xsd:int .
+
+:warning a :severity,
+        owl:NamedIndividual ;
+       :severityName "Warning"^^xsd:string ;
+	   :severityCode "4"^^xsd:int .
+
+:notice a :severity,
+        owl:NamedIndividual ;
+       :severityName "Notice"^^xsd:string ;
+	   :severityCode "5"^^xsd:int .
+	   
+:informational a :severity,
+        owl:NamedIndividual ;
+       :severityName "Informational"^^xsd:string ;
+	   :severityCode "6"^^xsd:int .
+	   
+:debug a :severity,
+        owl:NamedIndividual ;
+       :severityName "Debug"^^xsd:string ;
+	   :severityCode "7"^^xsd:int .
+	   
+	   
+:kernel a :facility,
+        owl:NamedIndividual ;
+       :facilityName "kernel"^^xsd:string ;
+	   :facilityCode "0"^^xsd:int . 
+	   
+:user-level a :facility,
+        owl:NamedIndividual ;
+       :facilityName "user-level"^^xsd:string ;
+	   :facilityCode "1"^^xsd:int .
+	   
+:mail a :facility,
+        owl:NamedIndividual ;
+       :facilityName "mail"^^xsd:string ;
+	   :facilityCode "2"^^xsd:int . 
+	   
+:daemon a :facility,
+        owl:NamedIndividual ;
+       :facilityName "daemon"^^xsd:string ;
+	   :facilityCode "3"^^xsd:int . 
+	   
+:security/authorization a :facility,
+        owl:NamedIndividual ;
+       :facilityName "security/authorization"^^xsd:string ;
+	   :facilityCode "4"^^xsd:int . 
+	   
+:syslogd a :facility,
+        owl:NamedIndividual ;
+       :facilityName "syslogd"^^xsd:string ;
+	   :facilityCode "5"^^xsd:int . 
+	   
+:line-printer a :facility,
+        owl:NamedIndividual ;
+       :facilityName "line printer"^^xsd:string ;
+	   :facilityCode "6"^^xsd:int . 
+	   
+:network-news a :facility,
+        owl:NamedIndividual ;
+       :facilityName "network-news"^^xsd:string ;
+	   :facilityCode "7"^^xsd:int . 
+	   
+:uucp" a :facility,
+        owl:NamedIndividual ;
+       :facilityName "uucp"^^xsd:string ;
+	   :facilityCode "8"^^xsd:int . 
+	   
+:clock  a :facility,
+        owl:NamedIndividual ;
+       :facilityName "clock"^^xsd:string ;
+	   :facilityCode "9"^^xsd:int . 
+	   
+:ftp a :facility,
+        owl:NamedIndividual ;
+       :facilityName "ftp"^^xsd:string ;
+	   :facilityCode "10"^^xsd:int . 
+	   
+:ntp" a :facility,
+        owl:NamedIndividual ;
+       :facilityName "ntp"^^xsd:string ;
+	   :facilityCode "11"^^xsd:int . 
+	   
+:log-audit a :facility,
+        owl:NamedIndividual ;
+       :facilityName "log-audit"^^xsd:string ;
+	   :facilityCode "12"^^xsd:int . 
+	   
+:log-alert a :facility,
+        owl:NamedIndividual ;
+       :facilityName "log-alert"^^xsd:string ;
+	   :facilityCode "13"^^xsd:int .
+	   
+:cron a :facility,
+        owl:NamedIndividual ;
+       :facilityName "cron"^^xsd:string ;
+	   :facilityCode "14"^^xsd:int .
+	   
+:security/authorization a :facility,
+        owl:NamedIndividual ;
+       :facilityName "security/authorization"^^xsd:string ;
+	   :facilityCode "15"^^xsd:int .
+	   
+:local0 a :facility,
+        owl:NamedIndividual ;
+       :facilityName "local0"^^xsd:string ;
+	   :facilityCode "16"^^xsd:int .
+	   
+:local1 a :facility,
+        owl:NamedIndividual ;
+       :facilityName "local1"^^xsd:string ;
+	   :facilityCode "17"^^xsd:int .
+	   
+:local2 a :facility,
+        owl:NamedIndividual ;
+       :facilityName "local2"^^xsd:string ;
+	   :facilityCode "18"^^xsd:int .
+	   
+:local3 a :facility,
+        owl:NamedIndividual ;
+       :facilityName "local3"^^xsd:string ;
+	   :facilityCode "19"^^xsd:int .
+	   
+:local4 a :facility,
+        owl:NamedIndividual ;
+       :facilityName "local4"^^xsd:string ;
+	   :facilityCode "20"^^xsd:int .
+	   
+:local5 a :facility,
+        owl:NamedIndividual ;
+       :facilityName "local5"^^xsd:string ;
+	   :facilityCode "21"^^xsd:int .
+	   
+:local6 a :facility,
+        owl:NamedIndividual ;
+       :facilityName "local6"^^xsd:string ;
+	   :facilityCode "22"^^xsd:int .
+	   
+:local7 a :facility,
+        owl:NamedIndividual ;
+       :facilityName "local7"^^xsd:string ;
+	   :facilityCode "23"^^xsd:int .
+
 
 :facilityCode a owl:DatatypeProperty ;
     rdfs:domain :facility ;
