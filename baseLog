@@ -1,5 +1,4 @@
 @prefix : <http://purl.org/sepses/vocab/log/baseLog#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -8,50 +7,50 @@
 <http://purl.org/sepses/vocab/log/baseLog#> a owl:Ontology .
 
 
-:host a owl:Class .
+:Host a rdfs:Class .
 
-:logEntry a owl:Class .
+:LogEntry a rdfs:Class .
 
-:logType a owl:Class .
+:LogType a rdfs:Class .
 
-:IPAddress a owl:DatatypeProperty ;
-    rdfs:domain :host;
+:ipAddress a rdfs:Datatype ;
+    rdfs:domain :Host;
     rdfs:range xsd:string .
     
-:IP4address a owl:DatatypeProperty ;
-    rdfs:domain :host ;
+:ip4Address a rdfs:Datatype ;
+    rdfs:domain :Host ;
     rdfs:range xsd:string ;
-    rdfs:subPropertyOf :IPAddress .
+    rdfs:subPropertyOf :ipAddress .
     
-:IP6address a owl:DatatypeProperty ;
-    rdfs:domain :host ;
+:ip6Address a rdfs:Datatype ;
+    rdfs:domain :Host ;
     rdfs:range xsd:string ;
-    rdfs:subPropertyOf :IPAddress .
+    rdfs:subPropertyOf :ipAddress .
 
-:hostName a owl:DatatypeProperty ;
-    rdfs:domain :host ;
+:hostName a rdfs:Datatype ;
+    rdfs:domain :Host ;
     rdfs:range xsd:string .
 
-:logTypeName a owl:DatatypeProperty ;
-    rdfs:domain :logType ;
+:logTypeName a rdfs:Datatype ;
+    rdfs:domain :LogType ;
     rdfs:range xsd:string .
 
-:logFilePath a owl:DatatypeProperty ;
-    rdfs:domain :logEntry ;
+:logFilePath a rdfs:Datatype ;
+    rdfs:domain :LogEntry ;
     rdfs:range xsd:string .
 
-:logMessage a owl:DatatypeProperty ;
-    rdfs:domain :logEntry ;
+:logMessage a rdfs:Datatype ;
+    rdfs:domain :LogEntry ;
     rdfs:range xsd:string .
 
-:timestamp a owl:DatatypeProperty ;
-    rdfs:domain :logEntry ;
+:timestamp a rdfs:Datatype ;
+    rdfs:domain :LogEntry ;
     rdfs:range xsd:dateTime .
 
-:hasLogType a owl:ObjectProperty ;
-	rdfs:domain :logEntry ;
-	rdfs:range :logType .
+:hasLogType a rdfs:Property ;
+	rdfs:domain :LogEntry ;
+	rdfs:range :LogType .
 
-:originatesFrom a owl:ObjectProperty ;
-    rdfs:domain :logEntry ;
-    rdfs:range :host .
+:originatesFrom a rdfs:Property ;
+    rdfs:domain :LogEntry ;
+    rdfs:range :Host .
