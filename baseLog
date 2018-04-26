@@ -44,7 +44,7 @@
     rdfs:domain :logEntry ;
     rdfs:range xsd:string .
 
-:logTimesStamp a owl:DatatypeProperty ;
+:timestamp a owl:DatatypeProperty ;
     rdfs:domain :logEntry ;
     rdfs:range xsd:dateTime .
 
