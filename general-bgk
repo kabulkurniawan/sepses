@@ -1,26 +1,26 @@
-@prefix : <http://kabulkurniawan.com/bg-knowledge/general-bgk> .
+@prefix : <http://example.org/system#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix glog:<http://kabulkurniawan.com/vocab/genlog#> .
-@prefix ape:<http://kabulkurniawan.com/vocab/apache-Event#> .
-@prefix sys:<http://kabulkurniawan.com/vocab/syslog-Event#> .
+@prefix bl:<http://purl.org/sepses/vocab/log/baseLog#> .
+@prefix al:<http://purl.org/sepses/vocab/log/apacheLog#> .
+@prefix sl:<http://purl.org/sepses/vocab/log/syslogLog#> .
 
-:syslog a glog:logType,
+:syslog a bl:logType,
         owl:NamedIndividual ;
     glog:logTypeName "Syslog"^^xsd:String .
 
-:apache a glog:logType,
+:apache a bl:logType,
         owl:NamedIndividual ;
-    glog:logTypeName "Apache"^^xsd:String .
+    bl:logTypeName "Apache"^^xsd:String .
 
-:kabul-VirtualBox a glog:host,
-	glog:hostName "kabul-VirtualBox"^^xsd:String ;
-	glog:IPAddress "192.168.0.164"^^xsd:String .
+:kabul-VirtualBox a bl:host,
+	bl:hostName "kabul-VirtualBox"^^xsd:String ;
+	bl:IPAddress "192.168.0.164"^^xsd:String .
 	
-:66.249.73.135 a ape:client,
-	glog:IPAddress "66.249.73.135"^^xsd:String .
+:66.249.73.135 a al:client,
+	bl:IPAddress "66.249.73.135"^^xsd:String .
 
-:83.149.9.216 a ape:client,
-	glog:IPAddress "83.149.9.216"^^xsd:String .
+:83.149.9.216 a al:client,
+	bl:IPAddress "83.149.9.216"^^xsd:String .
 
-:snap a sys:program,
-    sys:programName "snap"^^xsd:String .
+:snap a sl:program,
+    sl:programName "snap"^^xsd:String .
