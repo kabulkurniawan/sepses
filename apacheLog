@@ -1,5 +1,4 @@
 @prefix : <http://purl.org/sepses/vocab/log/apacheLog#>.
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -7,86 +6,86 @@
 
 <http://purl.org/sepses/vocab/log/apacheLog#> a owl:Ontology .
 
-:Client a owl:Class .
+:Client a rdfs:Class .
 
-:Response a owl:Class .
+:Response a rdfs:Class .
 
-:ResponseType a owl:Class .
+:ResponseType a rdfs:Class .
 
-:Request a owl:Class .
+:Request a rdfs:Class .
 
-:Server a owl:Class .
+:Server a rdfs:Class .
 
-:Resource a owl:Class .
+:Resource a rdfs:Class .
 
-:RequestVerb a owl:Class .
+:RequestVerb a rdfs:Class .
 
 
-:agent a owl:DatatypeProperty ;
+:agent a rdfs:Datatype ;
     rdfs:domain :Request ;
     rdfs:range rdfs:Literal .
 
-:belongsTo a owl:ObjectProperty ;
+:belongsTo a rdfs:Property ;
     rdfs:domain :Resource ;
     rdfs:range :Server .
 
-:giveResponse a owl:ObjectProperty ;
+:giveResponse a rdfs:Property ;
     rdfs:domain :Server ;
     rdfs:range :Response .
 
-:hasRequest a owl:ObjectProperty ;
+:hasRequest a rdfs:Property ;
     rdfs:domain :Client ;
     rdfs:range :Server .
 
-:hasResource a owl:ObjectProperty ;
+:hasResource a rdfs:Property ;
     rdfs:domain :Response ;
     rdfs:range :Resource .
 
-:hasResponse a owl:ObjectProperty ;
+:hasResponse a rdfs:Property ;
     rdfs:domain :Server ;
     rdfs:range :Client .
 
-:hasResponseType a owl:ObjectProperty ;
+:hasResponseType a rdfs:Property ;
     rdfs:domain :Response ;
     rdfs:range :ResponseType .
 
-:httpVersion a owl:DatatypeProperty ;
+:httpVersion a rdfs:Datatype ;
     rdfs:domain :Request ;
     rdfs:range xsd:string .
 
-:referrer a owl:DatatypeProperty ;
+:referrer a rdfs:Datatype ;
     rdfs:domain :Request ;
     rdfs:range rdfs:Literal .
 
-:requestTarget a owl:ObjectProperty ;
+:requestTarget a rdfs:Property ;
     rdfs:domain :Request ;
     rdfs:range :Resource .
 
-:hasRequestVerb a owl:ObjectProperty ;
+:hasRequestVerb a rdfs:Property ;
     rdfs:domain :Request ;
     rdfs:range :RequestVerb .
 
-:resourcePath a owl:DatatypeProperty ;
+:resourcePath a rdfs:Datatype ;
     rdfs:domain :Resource ;
     rdfs:range rdfs:Literal .
 	
-:requestVerbName a owl:DatatypeProperty ;
+:requestVerbName a rdfs:Datatype ;
     rdfs:domain :RequestVerb ;
     rdfs:range xsd:String .
 
-:resourceSize a owl:DatatypeProperty ;
+:resourceSize a rdfs:Datatype ;
     rdfs:domain :Resource ;
     rdfs:range xsd:int .
 
-:responseTypeCode a owl:DatatypeProperty ;
+:responseTypeCode a rdfs:Datatype ;
     rdfs:domain :ResponseType ;
     rdfs:range xsd:int .
 
-:responseTypeDescription a owl:DatatypeProperty ;
+:responseTypeDescription a rdfs:Datatype ;
     rdfs:domain :ResponseType ;
     rdfs:range rdfs:Literal .
 	
-:clientIP a owl:DatatypeProperty ;
+:clientIP a rdfs:Datatype ;
     rdfs:domain :Client ;
     rdfs:range xsd:String .
 
