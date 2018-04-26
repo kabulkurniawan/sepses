@@ -176,8 +176,3 @@
         owl:NamedIndividual ;
 		:responseTypeCode "404"^^xsd:String ;
 		:responseTypeDescription "Not Found"^^xsd:String 
-		
-
-:83.149.9.216 a :Client,
-        owl:NamedIndividual ;
-		:clientIP "83.149.9.216"^^xsd:String .
