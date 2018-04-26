@@ -38,11 +38,11 @@
     rdfs:domain :severity ;
     rdfs:range xsd:string .
 
-:facility a rdfs:Class .
+:Facility a rdfs:Class .
 
-:severity a rdfs:Class .
+:Severity a rdfs:Class .
 
-:program a rdfs:Class .
+:Program a rdfs:Class .
 
 
 
