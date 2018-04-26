@@ -1,4 +1,6 @@
-@prefix : <http://purl.org/sepses/vocab/log/apacheLog#>.
+@prefix : <http://purl.org/sepses/vocab/log/apacheLog#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix http: <http://www.w3.org/2011/http#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -10,7 +12,7 @@
 
 :Response a rdfs:Class .
 
-:ResponseType a rdfs:Class .
+:ResponseType a http:StatusCode .
 
 :Request a rdfs:Class .
 
@@ -18,7 +20,7 @@
 
 :Resource a rdfs:Class .
 
-:RequestVerb a rdfs:Class .
+:RequestVerb a http:Method .
 
 
 :agent a rdfs:Datatype ;
@@ -69,109 +71,10 @@
     rdfs:domain :Resource ;
     rdfs:range rdfs:Literal .
 	
-:requestVerbName a rdfs:Datatype ;
-    rdfs:domain :RequestVerb ;
-    rdfs:range xsd:String .
-
 :resourceSize a rdfs:Datatype ;
     rdfs:domain :Resource ;
     rdfs:range xsd:int .
-
-:responseTypeCode a rdfs:Datatype ;
-    rdfs:domain :ResponseType ;
-    rdfs:range xsd:int .
-
-:responseTypeDescription a rdfs:Datatype ;
-    rdfs:domain :ResponseType ;
-    rdfs:range rdfs:Literal .
 	
 :clientIP a rdfs:Datatype ;
     rdfs:domain :Client ;
     rdfs:range xsd:String .
-
-:GET a :RequestVerb,
-        owl:NamedIndividual ;
-       :requestVerbName "GET"^^xsd:String .
-	
-:POST a :RequestVerb,
-        owl:NamedIndividual ;
-    :requestVerbName "POST"^^xsd:String .
-	
-:PUT a :RequestVerb,
-        owl:NamedIndividual ;
-    :requestVerbName "PUT"^^xsd:String .
-	
-:DELETE a :RequestVerb,
-        owl:NamedIndividual ;
-    :requestVerbName "DELETE"^^xsd:String .
-	
-:CONNECT a :RequestVerb,
-        owl:NamedIndividual ;
-    :requestVerbName "CONNECT"^^xsd:String .
-	
-:OPTIONS a :RequestVerb,
-        owl:NamedIndividual ;
-    :requestVerbName "OPTIONS"^^xsd:String .
-
-:TRACE a :RequestVerb,
-        owl:NamedIndividual ;
-    :requestVerbName "TRACE"^^xsd:String .
-
-:PATCH a :RequestVerb,
-        owl:NamedIndividual ;
-    :requestVerbName "PATCH"^^xsd:String .
-
-:200 a :ResponseType,
-        owl:NamedIndividual ;
-		:responseTypeCode "200"^^xsd:String ;
-		:responseTypeDescription "Success"^^xsd:String 
-
-:201 a :ResponseType,
-        owl:NamedIndividual ;
-		:responseTypeCode "201"^^xsd:String ;
-		:responseTypeDescription "Created"^^xsd:String 
-
-:202 a :ResponseType,
-        owl:NamedIndividual ;
-		:responseTypeCode "202"^^xsd:String ;
-		:responseTypeDescription "Accepted"^^xsd:String 
-
-
-:204 a :ResponseType,
-        owl:NamedIndividual ;
-		:responseTypeCode "203"^^xsd:String ;
-		:responseTypeDescription "No Content"^^xsd:String 
-
-:205 a :ResponseType,
-        owl:NamedIndividual ;
-		:responseTypeCode "200"^^xsd:String ;
-		:responseTypeDescription "Reset Content"^^xsd:String 
-		
-
-:206 a :ResponseType,
-        owl:NamedIndividual ;
-		:responseTypeCode "206"^^xsd:String ;
-		:responseTypeDescription "Partial Content"^^xsd:String 
-		
-
-:207 a :ResponseType,
-        owl:NamedIndividual ;
-		:responseTypeCode "207"^^xsd:String ;
-		:responseTypeDescription "Multi-Status"^^xsd:String 
-		
-
-:208 a :ResponseType,
-        owl:NamedIndividual ;
-		:responseTypeCode "208"^^xsd:String ;
-		:responseTypeDescription "Already Reported"^^xsd:String 
-		
-
-:403 a :ResponseType,
-        owl:NamedIndividual ;
-		:responseTypeCode "403"^^xsd:String ;
-		:responseTypeDescription "Forbidden"^^xsd:String 
-
-:404 a :ResponseType,
-        owl:NamedIndividual ;
-		:responseTypeCode "404"^^xsd:String ;
-		:responseTypeDescription "Not Found"^^xsd:String 
