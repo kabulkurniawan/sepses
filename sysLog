@@ -28,7 +28,7 @@
     rdfs:range xsd:int .
 
 :programName a rdfs:Datatype ;
-    rdfs:domain :Program ;
+    rdfs:domain :SyslogProgram ;
     rdfs:range xsd:string .
 
 :severityCode a rdfs:Datatype ;
@@ -39,6 +39,7 @@
     rdfs:domain :Severity ;
     rdfs:range xsd:string .
 
+	
 
 :Process a rdfs:Class .
 	
@@ -53,6 +54,9 @@
      rdfs:subClassOf :SeverityLevel .
 	 
 :Program a rdfs:Class .
+
+:SyslogProgram a rdfs:Class ;
+	     rdfs:subClassOf :Program . 
 
 
 
