@@ -17,34 +17,41 @@
 
 :hasFacility a rdfs:Property ;
     rdfs:domain :Program ;
-    rdfs:range :Facility .
+    rdfs:range :FacilityLevel .
 
 :hasSeverity a rdfs:Property ;
     rdfs:domain :Program ;
-    rdfs:range :Severity .
+    rdfs:range :SeverityLevel .
 
 :processId a rdfs:Datatype ;
-    rdfs:domain :Program ;
+    rdfs:domain :Process ;
     rdfs:range xsd:int .
 
 :programName a rdfs:Datatype ;
-    rdfs:domain :Process ;
+    rdfs:domain :Program ;
     rdfs:range xsd:string .
 
 :severityCode a rdfs:Datatype ;
     rdfs:domain :Severity ;
     rdfs:range xsd:int .
 
-:severityCode a rdfs:Datatype ;
+:severityName a rdfs:Datatype ;
     rdfs:domain :Severity ;
     rdfs:range xsd:string .
 
+
 :Process a rdfs:Class .
 	
-:Facility a rdfs:Class .
+:FacilityLevel a rdfs:Class .
 
-:Severity a rdfs:Class .
+:Facility a rdfs:Class ;
+     rdfs:subClassOf :FacilityLevel . 
 
+:SeverityLevel a rdfs:Class .
+    
+:Severity a rdfs:Class ;
+     rdfs:subClassOf :SeverityLevel .
+	 
 :Program a rdfs:Class .
 
 
