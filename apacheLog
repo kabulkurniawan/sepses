@@ -1,5 +1,5 @@
 @prefix : <http://purl.org/sepses/vocab/log/apacheLog#> .
-@prefix bl: <http://purl.org/sepses/vocab/log/baseLog#> .
+@prefix cl: <http://purl.org/sepses/vocab/log/coreLog#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix http: <http://www.w3.org/2011/http#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -17,7 +17,7 @@
 
 :Request a rdfs:Class .
 
-:Server a bl:Host .
+:Server a  cl:Host .
 
 :Resource a rdfs:Class .
 
@@ -38,15 +38,15 @@
 
 :hasRequest a rdf:Property ;
     rdfs:domain :Client ;
-    rdfs:range :Server .
+    rdfs:range :Request .
 
 :hasResource a rdf:Property ;
     rdfs:domain :Response ;
     rdfs:range :Resource .
 
 :hasResponse a rdf:Property ;
-    rdfs:domain :Server ;
-    rdfs:range :Client .
+    rdfs:domain :Client ;
+    rdfs:range :Response .
 
 :hasResponseType a rdf:Property ;
     rdfs:domain :Response ;
