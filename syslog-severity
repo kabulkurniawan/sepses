@@ -1,0 +1,37 @@
+@prefix : <http://purl.org/sepses/syslog-severity#>
+@prefix sl: <http://purl.org/sepses/vocab/log/sysLog#>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+:emergency a sl:Severity,
+       sl:severityName "Emergency"^^rdfs:Literal ;
+	   sl:severityCode "0"^^xsd:int . 
+	
+:alert a sl:Severity,
+       sl:severityName "Alert"^^rdfs:Literal ;
+	   sl:severityCode "1"^^xsd:int .
+	   
+:critical a sl:Severity,
+       sl:severityName "Critical"^^rdfs:Literal ;
+	   sl:severityCode "2"^^xsd:int .
+	   
+:error a sl:Severity,
+       sl:severityName "Error"^^rdfs:Literal ;
+	   sl:severityCode "3"^^xsd:int .
+
+:warning a sl:Severity,
+       sl:severityName "Warning"^^rdfs:Literal ;
+	   sl:severityCode "4"^^xsd:int .
+
+:notice a sl:Severity,
+       sl:severityName "Notice"^^rdfs:Literal ;
+	   sl:severityCode "5"^^xsd:int .
+	   
+:informational a sl:Severity,
+       sl:severityName "Informational"^^rdfs:Literal ;
+	   sl:severityCode "6"^^xsd:int .
+	   
+:debug a sl:Severity,
+       sl:severityName "Debug"^^rdfs:Literal ;
+	   sl:severityCode "7"^^xsd:int .
