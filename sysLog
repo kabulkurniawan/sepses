@@ -1,190 +1,53 @@
 @prefix : <http://purl.org/sepses/vocab/log/sysLog#>
+@prefix bl: <http://purl.org/sepses/vocab/log/baseLog#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://purl.org/sepses/vocab/log/sysLog#> a owl:Ontology .
+<http://purl.org/sepses/vocab/log/sysLog> a owl:Ontology .
 
-:facilityCode a rdfs:Datatype ;
+:facilityCode a rdf:Property ;
     rdfs:domain :Facility ;
-    rdfs:range xsd:integer .
-
-:facilityName a rdfs:Datatype ;
-    rdfs:domain :Facility ;
-    rdfs:range xsd:string .
-
-:hasFacility a rdfs:Property ;
-    rdfs:domain :Program ;
-    rdfs:range :FacilityLevel .
-
-:hasSeverity a rdfs:Property ;
-    rdfs:domain :Program ;
-    rdfs:range :SeverityLevel .
-
-:processId a rdfs:Datatype ;
-    rdfs:domain :Process ;
     rdfs:range xsd:int .
 
-:programName a rdfs:Datatype ;
-    rdfs:domain :SyslogProgram ;
-    rdfs:range xsd:string .
+:facilityName a rdf:Property ;
+    rdfs:domain :Facility ;
+    rdfs:range rdfs:Literal .
 
-:severityCode a rdfs:Datatype ;
+:hasFacilityLevel a rdf:Property ;
+    rdfs:domain bl:LogEntry ;
+    rdfs:range :Facility .
+
+:hasSeverityLevel a rdf:Property ;
+    rdfs:domain bl:LogEntry ;
+    rdfs:range :Severity .
+
+:hasProcessId a rdf:Property ;
+    rdfs:domain bl:LogEntry ;
+    rdfs:range xsd:int .
+
+:programName a rdf:Property ;
+    rdfs:domain :Program ;
+    rdfs:range rdfs:Literal .
+	
+:hasProgram a rdf:Property ;
+    rdfs:domain bl:LogEntry ;
+    rdfs:range :Program
+
+:severityCode a rdf:Property ;
     rdfs:domain :Severity ;
     rdfs:range xsd:int .
 
-:severityName a rdfs:Datatype ;
+:severityName a rdf:Property ;
     rdfs:domain :Severity ;
-    rdfs:range xsd:string .
+    rdfs:range rdfs:Literal .
 
 	
 
-:Process a rdfs:Class .
-	
-:FacilityLevel a rdfs:Class .
 
-:Facility a rdfs:Class ;
-     rdfs:subClassOf :FacilityLevel . 
+:Facility a rdfs:Class .
 
-:SeverityLevel a rdfs:Class .
-    
-:Severity a rdfs:Class ;
-     rdfs:subClassOf :SeverityLevel .
+:Severity a rdfs:Class .
 	 
 :Program a rdfs:Class .
-
-:SyslogProgram a rdfs:Class ;
-	     rdfs:subClassOf :Program . 
-
-
-
-:emergency a :Severity,
-       :severityCode "Emergency"^^xsd:string ;
-	   :severityCode "0"^^xsd:int . 
-	
-:alert a :Severity,
-        severityCode "Alert"^^xsd:string ;
-	   :severityCode "1"^^xsd:int .
-	   
-:critical a :Severity,
-       :severityCode "Critical"^^xsd:string ;
-	   :severityCode "2"^^xsd:int .
-	   
-:error a :Severity,
-       :severityCode "Error"^^xsd:string ;
-	   :severityCode "3"^^xsd:int .
-
-:warning a :Severity,
-       :severityCode "Warning"^^xsd:string ;
-	   :severityCode "4"^^xsd:int .
-
-:notice a :Severity,
-       :severityCode "Notice"^^xsd:string ;
-	   :severityCode "5"^^xsd:int .
-	   
-:informational a :Severity,
-       :severityCode "Informational"^^xsd:string ;
-	   :severityCode "6"^^xsd:int .
-	   
-:debug a :Severity,
-       :severityCode "Debug"^^xsd:string ;
-	   :severityCode "7"^^xsd:int .
-	   
-	   
-:kernel a :Facility,
-       :facilityName "kernel"^^xsd:string ;
-	   :facilityCode "0"^^xsd:int . 
-	   
-:user-level a :Facility,
-       :facilityName "user-level"^^xsd:string ;
-	   :facilityCode "1"^^xsd:int .
-	   
-:mail a :Facility, 
-       :facilityName "mail"^^xsd:string ;
-	   :facilityCode "2"^^xsd:int . 
-	   
-:daemon a :Facility,
-       :facilityName "daemon"^^xsd:string ;
-	   :facilityCode "3"^^xsd:int . 
-	   
-:security/authorization a :Facility,
-       :facilityName "security/authorization"^^xsd:string ;
-	   :facilityCode "4"^^xsd:int . 
-	   
-:syslogd a :Facility,
-       :facilityName "syslogd"^^xsd:string ;
-	   :facilityCode "5"^^xsd:int . 
-	   
-:line-printer a :Facility,
-       :facilityName "line printer"^^xsd:string ;
-	   :facilityCode "6"^^xsd:int . 
-	   
-:network-news a :Facility,
-       :facilityName "network-news"^^xsd:string ;
-	   :facilityCode "7"^^xsd:int . 
-	   
-:uucp" a :Facility,
-       :facilityName "uucp"^^xsd:string ;
-	   :facilityCode "8"^^xsd:int . 
-	   
-:clock  a :Facility,
-       :facilityName "clock"^^xsd:string ;
-	   :facilityCode "9"^^xsd:int . 
-	   
-:ftp a :Facility,
-       :facilityName "ftp"^^xsd:string ;
-	   :facilityCode "10"^^xsd:int . 
-	   
-:ntp" a :Facility,
-       :facilityName "ntp"^^xsd:string ;
-	   :facilityCode "11"^^xsd:int . 
-	   
-:log-audit a :Facility,
-       :facilityName "log-audit"^^xsd:string ;
-	   :facilityCode "12"^^xsd:int . 
-	   
-:log-alert a :Facility,
-       :facilityName "log-alert"^^xsd:string ;
-	   :facilityCode "13"^^xsd:int .
-	   
-:cron a :Facility,
-       :facilityName "cron"^^xsd:string ;
-	   :facilityCode "14"^^xsd:int .
-	   
-:security/authorization a :Facility,
-       :facilityName "security/authorization"^^xsd:string ;
-	   :facilityCode "15"^^xsd:int .
-	   
-:local0 a :Facility,
-       :facilityName "local0"^^xsd:string ;
-	   :facilityCode "16"^^xsd:int .
-	   
-:local1 a :Facility,
-       :facilityName "local1"^^xsd:string ;
-	   :facilityCode "17"^^xsd:int .
-	   
-:local2 a :Facility,
-       :facilityName "local2"^^xsd:string ;
-	   :facilityCode "18"^^xsd:int .
-	   
-:local3 a :Facility,
-       :facilityName "local3"^^xsd:string ;
-	   :facilityCode "19"^^xsd:int .
-	   
-:local4 a :Facility,
-       :facilityName "local4"^^xsd:string ;
-	   :facilityCode "20"^^xsd:int .
-	   
-:local5 a :Facility,
-       :facilityName "local5"^^xsd:string ;
-	   :facilityCode "21"^^xsd:int .
-	   
-:local6 a :Facility,
-       :facilityName "local6"^^xsd:string ;
-	   :facilityCode "22"^^xsd:int .
-	   
-:local7 a :Facility,
-       :facilityName "local7"^^xsd:string ;
-	   :facilityCode "23"^^xsd:int .
