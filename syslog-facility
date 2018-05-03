@@ -1,0 +1,102 @@
+@prefix : <http://purl.org/sepses/syslog-facility#>
+@prefix sl: <http://purl.org/sepses/vocab/log/sysLog#>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ 
+	   
+:kernel a sl:Facility,
+       sl:facilityName "kernel"^^rdfs:Literal ;
+	   sl:facilityCode "0"^^xsd:int . 
+	   
+:user-level a sl:Facility,
+       sl:facilityName "user-level"^^rdfs:Literal ;
+	   sl:facilityCode "1"^^xsd:int .
+	   
+:mail a sl:Facility, 
+       sl:facilityName "mail"^^rdfs:Literal ;
+	   sl:facilityCode "2"^^xsd:int . 
+	   
+:daemon a sl:Facility,
+       sl:facilityName "daemon"^^rdfs:Literal ;
+	   sl:facilityCode "3"^^xsd:int . 
+	   
+:security/authorization a sl:Facility,
+       sl:facilityName "security/authorization"^^rdfs:Literal ;
+	   sl:facilityCode "4"^^xsd:int . 
+	   
+:syslogd a sl:Facility,
+       sl:facilityName "syslogd"^^rdfs:Literal ;
+	   sl:facilityCode "5"^^xsd:int . 
+	   
+:line-printer a sl:Facility,
+       sl:facilityName "line printer"^^rdfs:Literal ;
+	   sl:facilityCode "6"^^xsd:int . 
+	   
+:network-news a sl:Facility,
+       sl:facilityName "network-news"^^rdfs:Literal ;
+	   sl:facilityCode "7"^^xsd:int . 
+	   
+:uucp" a sl:Facility,
+       sl:facilityName "uucp"^^rdfs:Literal ;
+	   sl:facilityCode "8"^^xsd:int . 
+	   
+:clock  a sl:Facility,
+       sl:facilityName "clock"^^rdfs:Literal ;
+	   sl:facilityCode "9"^^xsd:int . 
+	   
+:ftp a sl:Facility,
+       sl:facilityName "ftp"^^rdfs:Literal ;
+	   sl:facilityCode "10"^^xsd:int . 
+	   
+:ntp" a sl:Facility,
+       sl:facilityName "ntp"^^rdfs:Literal ;
+	   sl:facilityCode "11"^^xsd:int . 
+	   
+:log-audit a sl:Facility,
+       sl:facilityName "log-audit"^^rdfs:Literal ;
+	   sl:facilityCode "12"^^xsd:int . 
+	   
+:log-alert a sl:Facility,
+       sl:facilityName "log-alert"^^rdfs:Literal ;
+	   sl:facilityCode "13"^^xsd:int .
+	   
+:cron a sl:Facility,
+       sl:facilityName "cron"^^rdfs:Literal ;
+	   sl:facilityCode "14"^^xsd:int .
+	   
+:security/authorization a sl:Facility,
+       sl:facilityName "security/authorization"^^rdfs:Literal ;
+	   sl:facilityCode "15"^^xsd:int .
+	   
+:local0 a sl:Facility,
+       sl:facilityName "local0"^^rdfs:Literal ;
+	   sl:facilityCode "16"^^xsd:int .
+	   
+:local1 a sl:Facility,
+       sl:facilityName "local1"^^rdfs:Literal ;
+	   sl:facilityCode "17"^^xsd:int .
+	   
+:local2 a sl:Facility,
+       sl:facilityName "local2"^^rdfs:Literal ;
+	   sl:facilityCode "18"^^xsd:int .
+	   
+:local3 a sl:Facility,
+       sl:facilityName "local3"^^rdfs:Literal ;
+	   sl:facilityCode "19"^^xsd:int .
+	   
+:local4 a sl:Facility,
+       sl:facilityName "local4"^^rdfs:Literal ;
+	   sl:facilityCode "20"^^xsd:int .
+	   
+:local5 a sl:Facility,
+       sl:facilityName "local5"^^rdfs:Literal ;
+	   sl:facilityCode "21"^^xsd:int .
+	   
+:local6 a sl:Facility,
+       sl:facilityName "local6"^^rdfs:Literal ;
+	   sl:facilityCode "22"^^xsd:int .
+	   
+:local7 a sl:Facility,
+       sl:facilityName "local7"^^rdfs:Literal ;
+	   sl:facilityCode "23"^^xsd:int .
