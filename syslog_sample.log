@@ -1,0 +1,100 @@
+Apr  9 09:21:45 kabul-VirtualBox rsyslogd: [origin software="rsyslogd" swVersion="8.16.0" x-pid="665" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Apr  9 09:21:49 kabul-VirtualBox anacron[723]: Job `cron.daily' terminated
+Apr  9 09:21:49 kabul-VirtualBox anacron[723]: Normal exit (1 job run)
+Apr  9 09:22:42 kabul-VirtualBox com.canonical.Unity.Scope.Applications[1169]: Error loading package indexes: Couldn't stat '/var/cache/software-center/xapian'
+Apr  9 09:22:42 kabul-VirtualBox com.canonical.Unity.Scope.Applications[1169]: (unity-scope-loader:3468): unity-applications-daemon-CRITICAL **: daemon.vala:144: Failed to load Software Center index. 'Apps Available for Download' will not be listed
+Apr  9 09:29:15 kabul-VirtualBox AptDaemon: INFO: Quitting due to inactivity
+Apr  9 09:29:15 kabul-VirtualBox org.debian.apt[683]: 09:29:15 AptDaemon [INFO]: Quitting due to inactivity
+Apr  9 09:29:15 kabul-VirtualBox org.debian.apt[683]: 09:29:15 AptDaemon [INFO]: Quitting was requested
+Apr  9 09:29:15 kabul-VirtualBox AptDaemon: INFO: Quitting was requested
+Apr  9 09:31:45 kabul-VirtualBox /usr/lib/snapd/snapd[731]: snapmgr.go:422: No snaps to auto-refresh found
+Apr  9 09:31:45 kabul-VirtualBox systemd[1]: Starting Cleanup of Temporary Directories...
+Apr  9 09:31:45 kabul-VirtualBox systemd-tmpfiles[3572]: [/usr/lib/tmpfiles.d/var.conf:14] Duplicate line for path "/var/log", ignoring.
+Apr  9 09:31:45 kabul-VirtualBox snapd[731]: 2018/04/09 09:31:45.982708 snapmgr.go:422: No snaps to auto-refresh found
+Apr  9 09:31:45 kabul-VirtualBox systemd[1]: Started Cleanup of Temporary Directories.
+Apr  9 09:36:07 kabul-VirtualBox NetworkManager[721]: <info>  [1523259367.2263] device (enp0s3): link disconnected (deferring action for 4 seconds)
+Apr  9 09:36:07 kabul-VirtualBox kernel: [ 1168.029952] e1000: enp0s3 NIC Link is Down
+Apr  9 09:36:07 kabul-VirtualBox kernel: [ 1168.030011] e1000 0000:00:03.0 enp0s3: Reset adapter
+Apr  9 09:36:09 kabul-VirtualBox NetworkManager[721]: <info>  [1523259369.3069] device (enp0s3): link connected
+Apr  9 09:36:09 kabul-VirtualBox NetworkManager[721]: <info>  [1523259369.3071] device (enp0s3): DHCPv4 lease renewal requested
+Apr  9 09:36:09 kabul-VirtualBox kernel: [ 1170.109289] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Apr  9 09:36:09 kabul-VirtualBox NetworkManager[721]: <info>  [1523259369.3084] dhcp4 (enp0s3): canceled DHCP transaction, DHCP client pid 792
+Apr  9 09:36:09 kabul-VirtualBox NetworkManager[721]: <info>  [1523259369.3084] dhcp4 (enp0s3): state changed bound -> done
+Apr  9 09:36:09 kabul-VirtualBox NetworkManager[721]: <info>  [1523259369.3105] dhcp4 (enp0s3): activation: beginning transaction (timeout in 45 seconds)
+Apr  9 09:36:09 kabul-VirtualBox NetworkManager[721]: <info>  [1523259369.3127] dhcp4 (enp0s3): dhclient started with pid 3925
+Apr  9 09:36:09 kabul-VirtualBox dhclient[3925]: DHCPREQUEST of 10.0.2.15 on enp0s3 to 255.255.255.255 port 67 (xid=0x56d6953d)
+Apr  9 09:36:09 kabul-VirtualBox dhclient[3925]: DHCPACK of 10.0.2.15 from 10.0.2.2
+Apr  9 09:36:09 kabul-VirtualBox dhclient[3925]: suspect value in domain_name option - discarded
+Apr  9 09:36:09 kabul-VirtualBox NetworkManager[721]: <info>  [1523259369.3289]   address 10.0.2.15
+Apr  9 09:36:09 kabul-VirtualBox NetworkManager[721]: <info>  [1523259369.3294]   plen 24 (255.255.255.0)
+Apr  9 09:36:09 kabul-VirtualBox NetworkManager[721]: <info>  [1523259369.3297]   gateway 10.0.2.2
+Apr  9 09:36:09 kabul-VirtualBox NetworkManager[721]: <info>  [1523259369.3300]   server identifier 10.0.2.2
+Apr  9 09:36:09 kabul-VirtualBox NetworkManager[721]: <info>  [1523259369.3304]   lease time 86400
+Apr  9 09:36:09 kabul-VirtualBox NetworkManager[721]: <info>  [1523259369.3306]   nameserver '128.131.168.3'
+Apr  9 09:36:09 kabul-VirtualBox NetworkManager[721]: <info>  [1523259369.3309]   nameserver '128.131.4.3'
+Apr  9 09:36:09 kabul-VirtualBox NetworkManager[721]: <info>  [1523259369.3311]   nameserver '128.130.4.3'
+Apr  9 09:36:09 kabul-VirtualBox NetworkManager[721]: <info>  [1523259369.3314]   nameserver '128.131.4.3'
+Apr  9 09:36:09 kabul-VirtualBox NetworkManager[721]: <info>  [1523259369.3317]   nameserver '128.130.4.3'
+Apr  9 09:36:09 kabul-VirtualBox NetworkManager[721]: <info>  [1523259369.3319] dhcp4 (enp0s3): state changed unknown -> bound
+Apr  9 09:36:09 kabul-VirtualBox dnsmasq[804]: setting upstream servers from DBus
+Apr  9 09:36:09 kabul-VirtualBox dnsmasq[804]: using nameserver 128.131.168.3#53(via enp0s3)
+Apr  9 09:36:09 kabul-VirtualBox dnsmasq[804]: using nameserver 128.131.4.3#53(via enp0s3)
+Apr  9 09:36:09 kabul-VirtualBox dnsmasq[804]: using nameserver 128.130.4.3#53(via enp0s3)
+Apr  9 09:36:09 kabul-VirtualBox NetworkManager[721]: <info>  [1523259369.3345] dns-mgr: Writing DNS information to /sbin/resolvconf
+Apr  9 09:36:09 kabul-VirtualBox dhclient[3925]: bound to 10.0.2.15 -- renewal in 32769 seconds.
+Apr  9 09:36:09 kabul-VirtualBox dbus[683]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service'
+Apr  9 09:36:09 kabul-VirtualBox systemd[1]: Starting Network Manager Script Dispatcher Service...
+Apr  9 09:36:09 kabul-VirtualBox dbus[683]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+Apr  9 09:36:09 kabul-VirtualBox systemd[1]: Started Network Manager Script Dispatcher Service.
+Apr  9 09:36:09 kabul-VirtualBox nm-dispatcher: req:1 'dhcp4-change' [enp0s3]: new request (1 scripts)
+Apr  9 09:36:09 kabul-VirtualBox nm-dispatcher: req:1 'dhcp4-change' [enp0s3]: start running ordered scripts...
+Apr  9 09:36:45 kabul-VirtualBox /usr/lib/snapd/snapd[731]: snapmgr.go:496: DEBUG: Next refresh scheduled for 2018-04-09 16:42:00.954079828 +0200 CEST.
+Apr  9 09:37:17 kabul-VirtualBox NetworkManager[721]: <info>  [1523259437.8510] device (enp0s3): link disconnected (deferring action for 4 seconds)
+Apr  9 09:37:17 kabul-VirtualBox kernel: [ 1238.618724] e1000: enp0s3 NIC Link is Down
+Apr  9 09:37:17 kabul-VirtualBox kernel: [ 1238.618810] e1000 0000:00:03.0 enp0s3: Reset adapter
+Apr  9 09:37:19 kabul-VirtualBox NetworkManager[721]: <info>  [1523259439.9636] device (enp0s3): link connected
+Apr  9 09:37:19 kabul-VirtualBox kernel: [ 1240.730055] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Apr  9 09:37:19 kabul-VirtualBox NetworkManager[721]: <info>  [1523259439.9651] device (enp0s3): DHCPv4 lease renewal requested
+Apr  9 09:37:19 kabul-VirtualBox NetworkManager[721]: <info>  [1523259439.9671] dhcp4 (enp0s3): canceled DHCP transaction, DHCP client pid 3925
+Apr  9 09:37:19 kabul-VirtualBox NetworkManager[721]: <info>  [1523259439.9671] dhcp4 (enp0s3): state changed bound -> done
+Apr  9 09:37:19 kabul-VirtualBox NetworkManager[721]: <info>  [1523259439.9714] dhcp4 (enp0s3): activation: beginning transaction (timeout in 45 seconds)
+Apr  9 09:37:19 kabul-VirtualBox NetworkManager[721]: <info>  [1523259439.9763] dhcp4 (enp0s3): dhclient started with pid 3996
+Apr  9 09:37:19 kabul-VirtualBox dhclient[3996]: DHCPREQUEST of 10.0.2.15 on enp0s3 to 255.255.255.255 port 67 (xid=0x1add4322)
+Apr  9 09:37:27 kabul-VirtualBox dhclient[3996]: message repeated 2 times: [ DHCPREQUEST of 10.0.2.15 on enp0s3 to 255.255.255.255 port 67 (xid=0x1add4322)]
+Apr  9 09:37:34 kabul-VirtualBox dhclient[3996]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 3 (xid=0xbbffe322)
+Apr  9 09:37:34 kabul-VirtualBox gnome-session[1804]: gnome-session-binary[1804]: GLib-GObject-CRITICAL: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+Apr  9 09:37:34 kabul-VirtualBox gnome-session-binary[1804]: GLib-GObject-CRITICAL: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+Apr  9 09:37:34 kabul-VirtualBox gnome-session[1804]: gnome-session-binary[1804]: GLib-GObject-CRITICAL: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+Apr  9 09:37:34 kabul-VirtualBox gnome-session-binary[1804]: GLib-GObject-CRITICAL: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+Apr  9 09:37:34 kabul-VirtualBox gnome-session[1804]: gnome-session-binary[1804]: GLib-GObject-CRITICAL: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+Apr  9 09:37:34 kabul-VirtualBox gnome-session-binary[1804]: GLib-GObject-CRITICAL: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+Apr  9 09:37:34 kabul-VirtualBox gnome-session[1804]: gnome-session-binary[1804]: GLib-GObject-CRITICAL: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+Apr  9 09:37:34 kabul-VirtualBox gnome-session-binary[1804]: GLib-GObject-CRITICAL: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+Apr  9 09:37:34 kabul-VirtualBox gnome-session[1804]: gnome-session-binary[1804]: GLib-GObject-CRITICAL: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+Apr  9 09:37:34 kabul-VirtualBox gnome-session-binary[1804]: GLib-GObject-CRITICAL: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+Apr  9 09:37:34 kabul-VirtualBox gnome-session[1804]: gnome-session-binary[1804]: GLib-GObject-CRITICAL: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+Apr  9 09:37:34 kabul-VirtualBox gnome-session-binary[1804]: GLib-GObject-CRITICAL: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+Apr  9 09:37:34 kabul-VirtualBox systemd[1]: Stopped target Sound Card.
+Apr  9 09:37:34 kabul-VirtualBox systemd[1]: Closed Load/Save RF Kill Switch Status /dev/rfkill Watch.
+Apr  9 09:37:34 kabul-VirtualBox systemd[1]: Stopping Daemon for power management...
+Apr  9 09:37:34 kabul-VirtualBox systemd[1]: Stopping Authenticate and Authorize Users to Run Privileged Tasks...
+Apr  9 09:37:34 kabul-VirtualBox systemd[1]: Stopping RealtimeKit Scheduling Policy Service...
+Apr  9 09:37:34 kabul-VirtualBox systemd[1]: Stopping ACPI event daemon...
+Apr  9 09:37:34 kabul-VirtualBox systemd[1]: Stopping Session c1 of user kabul.
+Apr  9 09:37:34 kabul-VirtualBox systemd[1]: Stopped target Graphical Interface.
+Apr  9 09:37:34 kabul-VirtualBox systemd[1]: Stopping Light Display Manager...
+Apr  9 09:37:34 kabul-VirtualBox systemd[1]: Stopped target Multi-User System.
+Apr  9 09:21:46 kabul-VirtualBox rsyslogd: [origin software="rsyslogd" swVersion="8.16.0" x-pid="665" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Apr  9 09:37:34 kabul-VirtualBox rsyslogd: [origin software="rsyslogd" swVersion="8.16.0" x-pid="665" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Apr  9 09:37:47 kabul-VirtualBox rsyslogd: [origin software="rsyslogd" swVersion="8.16.0" x-pid="681" x-info="http://www.rsyslog.com"] start
+Apr  9 09:37:47 kabul-VirtualBox rsyslogd-2222: command 'KLogPermitNonKernelFacility' is currently not permitted - did you already set it via a RainerScript command (v6+ config)? [v8.16.0 try http://www.rsyslog.com/e/2222 ]
+Apr  9 09:37:47 kabul-VirtualBox rsyslogd: rsyslogd's groupid changed to 108
+Apr  9 09:37:47 kabul-VirtualBox rsyslogd: rsyslogd's userid changed to 104
+Apr  9 09:37:47 kabul-VirtualBox rsyslogd-2039: Could not open output pipe '/dev/xconsole':: No such file or directory [v8.16.0 try http://www.rsyslog.com/e/2039 ]
+Apr  9 09:37:47 kabul-VirtualBox rsyslogd-2007: action 'action 10' suspended, next retry is Mon Apr  9 09:38:17 2018 [v8.16.0 try http://www.rsyslog.com/e/2007 ]
+Apr  9 09:37:47 kabul-VirtualBox systemd[1]: Mounted Debug File System.
+Apr  9 09:37:47 kabul-VirtualBox systemd[1]: Mounted POSIX Message Queue File System.
+Apr  9 09:37:47 kabul-VirtualBox systemd[1]: Mounted Huge Pages File System.
+Apr  9 09:37:47 kabul-VirtualBox systemd-modules-load[207]: Inserted module 'lp'
+Apr  9 09:37:47 kabul-VirtualBox systemd-modules-load[207]: Inserted module 'ppdev'
+Apr  9 09:37:47 kabul-VirtualBox systemd-modules-load[207]: Inserted module 'parport_pc'
