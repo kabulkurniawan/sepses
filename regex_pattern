@@ -1,0 +1,47 @@
+import re;
+#re entity pattern
+user = '[a-zA-Z0-9._-]+'
+ip4 = '(?<![0-9])(?:(?:[0-1]?[0-9]{1,2}|2[0-4][0-9]|25[0-5])[.](?:[0-1]?[0-9]{1,2}|2[0-4][0-9]|25[0-5])[.](?:[0-1]?[0-9]{1,2}|2[0-4][0-9]|25[0-5])[.](?:[0-1]?[0-9]{1,2}|2[0-4][0-9]|25[0-5]))(?![0-9])'
+
+#re login pattern
+
+loginfailed = [
+'Invalid user\s'+user+'\sfrom\s'+ip4+'\sport\s\d+\s\w+',
+'Invalid user\s'+user+'\sfrom\s'+ip4,
+'Failed password for invalid user\s'+user+'\sfrom\s'+ip4+'\sport\s\d+\s\w+',
+'check pass; user unknown',
+ ]
+
+loginsuccess =[
+'Accepted password for\s'+user+'\sfrom\s'+ip4+'\sport\s\d+\s\w+',
+'session opened for user\s'+user+'\sby\s\(uid=\d+\)',
+'New session\s\d+\sof user\s'+user
+]
+
+lsc = "(" + ")|(".join(loginsuccess) + ")"
+lf ="(" + ")|(".join(loginfailed) + ")"
+
+#input event
+str0 = 'Accepted password for tamu from 128.131.168.145 port 65474 ssh2'
+str1 = 'session opened for user tamu by (uid=0)'
+str2 = 'New session 1 of user tamu'
+
+str3 = 'Invalid user tamu from 128.131.168.145 port 65424 ssh2'
+str5 = 'Invalid user tamu from 128.131.168.145'
+str4 = 'check pass; user unknown'
+str6 = 'Failed password for invalid user tamu from 128.131.168.145 port 65424 ssh2'
+
+#regex process
+#pattern = re.compile(p2)
+str = str1;
+
+test = re.search(lsc,str)
+test2 = re.search(lf,str)
+if test is not None:
+  print ('login event - success')
+elif test2 is not None:
+  print ('login event - failed')
+else: 
+  print ('unknow event')
+
+ 
