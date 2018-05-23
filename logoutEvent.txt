@@ -1,0 +1,21 @@
+@prefix : <http://purl.org/sepses/vocab/event/LogoutEvent#> .
+@prefix ble: <http://purl.org/sepses/vocab/event/baseLogEvent#> .
+@prefix ep: <http://purl.org/sepses/vocab/event/eventProperty#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/sepses/vocab/event/logoutEvent> a owl:Ontology .
+
+:LogoutEvent a rdfs:Class ;
+			rdfs:subClassOf ble:logEvent .
+
+:hasUser a rdf:Property ;
+        rdfs:domain  :LoginEvent ;
+		rdfs:range   ep:User .
+		
+:hasSession a rdfs:Property ;
+		rdfs:domain		:LoginEvent ;
+		rdfs:range		ep:Session .
+
